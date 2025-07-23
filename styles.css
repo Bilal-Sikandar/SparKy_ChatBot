@@ -1,0 +1,95 @@
+/* Main container styling */
+.stApp {
+    background: linear-gradient(90deg, #2d3436 0%, #0984e3 100%);
+    font-family: 'Times New Roman', serif;
+    color: white;
+}
+
+/* Chat message containers */
+.stChatMessage {
+    border-radius: 15px !important;
+    padding: 12px 16px !important;
+    margin: 8px 0 !important;
+    max-width: 80%;
+}
+
+/* User message styling */
+.stChatMessage[data-testid="user"] {
+    background-color: #2d3436 !important;
+    border-left: 4px solid #00ffff !important;
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+/* Assistant message styling */
+.stChatMessage[data-testid="assistant"] {
+    background-color: #636e72 !important;
+    border-right: 4px solid #00ffff !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+/* Chat input styling */
+.stChatInputContainer input {
+    border-radius: 20px !important;
+    border: 2px solid #00ffff !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    padding: 10px 15px !important;
+}
+
+.stChatInputContainer input:focus {
+    box-shadow: 0 0 10px #00ffff !important;
+    outline: none !important;
+}
+
+/* Send button styling */
+.stChatInputContainer button {
+    background-color: #00ffff !important;
+    color: #2d3436 !important;
+    border-radius: 20px !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    font-weight: bold !important;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5) !important;
+    transition: all 0.3s ease !important;
+}
+
+.stChatInputContainer button:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8) !important;
+}
+
+/* Wobble animation */
+@keyframes wobble {
+    0% { transform: translateX(0); }
+    15% { transform: translateX(-5px); }
+    30% { transform: translateX(5px); }
+    45% { transform: translateX(-5px); }
+    60% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.wobble {
+    animation: wobble 0.5s ease-in-out;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ffff;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00b3b3;
+}
